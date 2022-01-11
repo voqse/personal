@@ -20,7 +20,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           source: "."
-          target: "/root/node/personal"
+          target: "node/personal"
           strip_components: 1
 
       - name: Executing remote ssh commands
@@ -31,5 +31,5 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           script: |
-            cd /root/node/personal
+            cd node/personal
             npm run start
