@@ -33,5 +33,4 @@ jobs:
           script: |
             cd node/personal
             npm ci
-            npm install
-            npm run start
+            npm run service
