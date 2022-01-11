@@ -30,6 +30,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script:
+          script: |
             cd /root/node/personal
             npm run start
