@@ -8,23 +8,23 @@ function setTheme(themeName) {
 
 // function to toggle between light and dark theme
 function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-light');
-    document.body.classList.add('light')
-    document.body.classList.remove('dark')
+  if (localStorage.getItem('theme') === 'dark') {
+    setTheme('light');
+    // document.body.classList.add('light')
+    // document.body.classList.remove('dark')
   } else {
-    setTheme('theme-dark');
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
+    setTheme('dark');
+    // document.body.classList.add('dark')
+    // document.body.classList.remove('light')
   }
 }
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-dark');
+  if (localStorage.getItem('theme') === 'dark') {
+    setTheme('dark');
   } else {
-    setTheme('theme-light');
+    setTheme('light');
   }
 })();
 
