@@ -124,6 +124,10 @@ button,
     visibility: visible;
   }
 }
+
+.btn-main {
+  font-weight: 600;
+}
 // specific
 .avatar {
   flex: 0 0 auto;
@@ -146,9 +150,10 @@ button,
   padding: 0 2rem;
   margin-bottom: 3rem;
   text-align: center;
-  h1 {
-    font-weight: 600;
-    margin-bottom: 1rem;
+  font-weight: 600;
+  h2 {
+    font-weight: 700;
+    //margin-bottom: 1rem;
   }
   p {
     margin-bottom: 0;
