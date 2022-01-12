@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 
 server.get('/', (req, res) => {
-  res.send('Hello from Node.js app running on VPS!');
+  res.send('Site is under construction...');
 });
 
 server.listen(8080, () => {
