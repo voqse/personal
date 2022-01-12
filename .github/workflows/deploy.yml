@@ -33,5 +33,6 @@ jobs:
           script: |
             cd node/personal
             npm ci
+            npm run build
             pm2 delete index.js
             pm2 start index.js

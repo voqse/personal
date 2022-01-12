@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="16" height="16" viewBox="0 0 16 16">
+    <title>email 84</title>
+    <g class="nc-icon-wrapper" stroke-width="1" fill="#111111" stroke="#111111">
+        <g>
+            <path fill="none" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  d="M14.5 14.5h-13a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1z"/>
+            <path data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                  d="M2.5 4.5L8 9l5.5-4.5"/>
+        </g>
+    </g>
+</svg>

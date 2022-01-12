@@ -1,0 +1,182 @@
+@import "font";
+@import "variables";
+
+@import "~bootstrap/scss/bootstrap-reboot";
+
+body,
+body.light{
+  color: $body-color-light;
+  background-color: $body-bg-light;
+  transition: background-color ease-in-out 0.1s;
+}
+body.dark {
+  color: $body-color-dark;
+  background-color: $body-bg-dark;
+}
+// links
+a {
+  color: $color-link;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: darken($color-link, 5%);
+  }
+  &:active,
+  &.active {
+    color: darken($color-link, 10%);
+  }
+}
+// layout
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: $container-max-width;
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+}
+
+footer {
+  display: flex;
+  small {
+    line-height: inherit;
+    text-align: center;
+  }
+}
+.footer-icon {
+  color: $color-primary;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pull-right {
+  margin-left: auto;
+}
+// buttons
+button,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  color: $body-color-light;
+  text-decoration: none;
+  cursor: pointer;
+  background: $btn-bg-light;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: background-color ease-in-out 0.1s;
+  &:hover,
+  &:focus {
+    color: $body-color-light;
+    background: darken($btn-bg-light, 2.5%);
+  }
+  &:active,
+  &.active {
+    color: $body-color-light;
+    background: darken($btn-bg-light, 5%);
+  }
+}
+.dark {
+  button,
+  .btn {
+    color: $body-color-dark;
+    background: $btn-bg-dark;
+    &:hover,
+    &:focus {
+      color: $body-color-dark;
+      background: darken($btn-bg-dark, 2.5%);
+    }
+    &:active,
+    &.active {
+      color: $body-color-dark;
+      background: darken($btn-bg-dark, 5%);
+    }
+  }
+}
+// specific
+.avatar {
+  flex: 0 0 auto;
+  width: $avatar-size;
+  height: $avatar-size;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  background: url("../assets/img/voqse-on-mars.jpg") no-repeat;
+  background-size: cover;
+  border: 0.25rem solid $btn-bg-light;
+  border-radius: $avatar-size / 2;
+  transition: border ease-in-out 0.1s;
+}
+.dark {
+  .avatar {
+    border-color: $btn-bg-dark;
+  }
+}
+.about {
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .about {
+    padding: 0 4rem;
+  }
+}
+@include media-breakpoint-up(md) {
+  .about {
+    padding: 0 6rem;
+  }
+}
+.contacts {
+  display: flex;
+  margin-bottom: 4rem;
+  button,
+  .btn {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 22px;
+  }
+  button + button,
+  .btn + .btn{
+    margin-left: 1rem;
+  }
+}
+// queries
+@media (prefers-color-scheme: dark) {
+  body:not(.light) {
+    color: $body-color-dark;
+    background-color: $body-bg-dark;
+    button,
+    .btn {
+      color: $body-color-dark;
+      background: $btn-bg-dark;
+      &:hover,
+      &:focus {
+        color: $body-color-dark;
+        background: darken($btn-bg-dark, 2.5%);
+      }
+      &:active,
+      &.active {
+        color: $body-color-dark;
+        background: darken($btn-bg-dark, 5%);
+      }
+    }
+    .avatar {
+      border-color: $btn-bg-dark;
+    }
+  }
+}

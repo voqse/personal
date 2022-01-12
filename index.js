@@ -1,11 +1,11 @@
 const express = require('express');
 
 const server = express();
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || 8080;
 
-server.get('/', (req, res) => {
-  res.send('Site is under construction...');
-});
+server.use('/', express.static('dist'));
 
-server.listen(8080, () => {
-  console.log('Server running on http://localhost:8080');
+server.listen(port, host, () => {
+  console.log(`Server running on http://${host}:${port}`);
 });
