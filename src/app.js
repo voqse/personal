@@ -10,12 +10,12 @@ function setTheme(themeName) {
 function toggleTheme() {
   if (localStorage.getItem('theme') === 'theme-dark') {
     setTheme('theme-light');
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
-  } else {
-    setTheme('theme-dark');
     document.body.classList.add('light')
     document.body.classList.remove('dark')
+  } else {
+    setTheme('theme-dark');
+    document.body.classList.add('dark')
+    document.body.classList.remove('light')
   }
 }
 
