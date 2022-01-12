@@ -1,7 +1,16 @@
 @import "font";
 @import "variables";
 
-@import "~bootstrap/scss/bootstrap-reboot";
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Replacement for bootstrap one
+@import "root";
+
+// Bootstrap again
+@import "~bootstrap/scss/reboot";
 
 body,
 body.light{
@@ -123,8 +132,12 @@ button,
 }
 .about {
   padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+  h1 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
   p {
     margin-bottom: 0;
   }
