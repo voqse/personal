@@ -1,5 +1,8 @@
 document.getElementById('theme-switcher').onclick = toggleTheme;
 
+const lightTheme = 'light';
+const darkTheme = 'dark';
+
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
   localStorage.setItem('theme', themeName);
@@ -10,18 +13,14 @@ function setTheme(themeName) {
 function toggleTheme() {
   if (localStorage.getItem('theme') === 'dark') {
     setTheme('light');
-    // document.body.classList.add('light')
-    // document.body.classList.remove('dark')
   } else {
     setTheme('dark');
-    // document.body.classList.add('dark')
-    // document.body.classList.remove('light')
   }
 }
 
 // Immediately invoked function to set the theme on initial load
 (function () {
-  if (localStorage.getItem('theme') === 'dark') {
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)'))) {
     setTheme('dark');
   } else {
     setTheme('light');
