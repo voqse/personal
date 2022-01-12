@@ -33,4 +33,4 @@ jobs:
           script: |
             cd node/personal
             npm ci
-            pm2 start index.js
+            pm2 start index.js -f
