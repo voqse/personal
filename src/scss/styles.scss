@@ -95,6 +95,10 @@ button,
     background: darken($btn-bg-light, 5%);
   }
 }
+.light-visible,
+.dark-visible {
+  visibility: hidden;
+}
 .dark {
   button,
   .btn {
@@ -110,6 +114,14 @@ button,
       color: $body-color-dark;
       background: darken($btn-bg-dark, 5%);
     }
+  }
+  .dark-visible {
+    visibility: visible;
+  }
+}
+.light {
+  .light-visible {
+    visibility: visible;
   }
 }
 // specific
