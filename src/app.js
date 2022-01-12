@@ -21,8 +21,9 @@ function toggleTheme() {
 // Immediately invoked function to set the theme on initial load
 (function () {
   const storedTheme = localStorage.getItem('theme');
+  const isSystemThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  if (storedTheme === darkTheme || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (storedTheme === darkTheme || (!storedTheme && isSystemThemeDark)) {
     setTheme(darkTheme);
   } else {
     setTheme(lightTheme);
