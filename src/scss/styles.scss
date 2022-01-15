@@ -1,40 +1,45 @@
-@import "font";
-@import "variables";
+@import 'font';
+@import 'variables';
 
 // Bootstrap
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
 
 // Replacement for bootstrap one
-@import "root";
+@import 'root';
 
 // Bootstrap again
-@import "~bootstrap/scss/reboot";
+@import 'bootstrap/scss/reboot';
 
 body,
-body.light{
+body.light {
   color: $body-color-light;
   background-color: $body-bg-light;
   transition: background-color ease-in-out 0.1s;
 }
+
 body.dark {
   color: $body-color-dark;
   background-color: $body-bg-dark;
 }
+
 // links
 a {
   color: $color-link;
   text-decoration: none;
+
   &:hover,
   &:focus {
     color: darken($color-link, 5%);
   }
+
   &:active,
   &.active {
     color: darken($color-link, 10%);
   }
 }
+
 // layout
 .container {
   display: flex;
@@ -52,11 +57,13 @@ header {
 
 footer {
   display: flex;
+
   small {
     line-height: inherit;
     text-align: center;
   }
 }
+
 .footer-icon {
   color: $color-primary;
 }
@@ -66,9 +73,11 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
 .pull-right {
   margin-left: auto;
 }
+
 // buttons
 button,
 .btn {
@@ -84,41 +93,49 @@ button,
   border-radius: 0.25rem;
   outline: none;
   transition: background-color ease-in-out 0.1s;
+
   &:hover,
   &:focus {
     color: $body-color-light;
     background: darken($btn-bg-light, 2.5%);
   }
+
   &:active,
   &.active {
     color: $body-color-light;
     background: darken($btn-bg-light, 5%);
   }
 }
+
 .light-visible,
 .dark-visible {
   visibility: hidden;
 }
+
 .dark {
   button,
   .btn {
     color: $body-color-dark;
     background: $btn-bg-dark;
+
     &:hover,
     &:focus {
       color: $body-color-dark;
       background: darken($btn-bg-dark, 2.5%);
     }
+
     &:active,
     &.active {
       color: $body-color-dark;
       background: darken($btn-bg-dark, 5%);
     }
   }
+
   .dark-visible {
     visibility: visible;
   }
 }
+
 .light {
   .light-visible {
     visibility: visible;
@@ -128,6 +145,7 @@ button,
 .btn-main {
   font-weight: 600;
 }
+
 // specific
 .avatar {
   flex: 0 0 auto;
@@ -135,43 +153,52 @@ button,
   height: $avatar-size;
   margin-bottom: 2rem;
   overflow: hidden;
-  background: url("../assets/img/voqse-on-mars.jpg") no-repeat;
+  background: url('../assets/img/voqse-on-mars.jpg') no-repeat;
   background-size: cover;
   border: 0.25rem solid $btn-bg-light;
   border-radius: $avatar-size / 2;
   transition: border ease-in-out 0.1s;
 }
+
 .dark {
   .avatar {
     border-color: $btn-bg-dark;
   }
 }
+
 .about {
   padding: 0 2rem;
   margin-bottom: 3rem;
-  text-align: center;
   font-weight: 600;
+  text-align: center;
+
   h2 {
     font-weight: 700;
+
     //margin-bottom: 1rem;
   }
+
   p {
     margin-bottom: 0;
   }
 }
+
 @include media-breakpoint-up(sm) {
   .about {
     padding: 0 4rem;
   }
 }
+
 @include media-breakpoint-up(md) {
   .about {
     padding: 0 6rem;
   }
 }
+
 .contacts {
   display: flex;
   margin-bottom: 4rem;
+
   button,
   .btn {
     flex: 0 0 auto;
@@ -180,31 +207,37 @@ button,
     padding: 0;
     border-radius: 22px;
   }
+
   button + button,
-  .btn + .btn{
+  .btn + .btn {
     margin-left: 1rem;
   }
 }
+
 // queries
 @media (prefers-color-scheme: dark) {
   body:not(.light) {
     color: $body-color-dark;
     background-color: $body-bg-dark;
+
     button,
     .btn {
       color: $body-color-dark;
       background: $btn-bg-dark;
+
       &:hover,
       &:focus {
         color: $body-color-dark;
         background: darken($btn-bg-dark, 2.5%);
       }
+
       &:active,
       &.active {
         color: $body-color-dark;
         background: darken($btn-bg-dark, 5%);
       }
     }
+
     .avatar {
       border-color: $btn-bg-dark;
     }

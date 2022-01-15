@@ -1,23 +1,19 @@
-$variable-prefix:             vq-;
-
-$font-size-root:              null;
-$font-family-sans-serif:      "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$variable-prefix: vq-;
+$font-size-root: null;
+$font-family-sans-serif: 'Open Sans', system-ui, -apple-system, 'Segoe UI',
+  roboto, 'Helvetica Neue', arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
 //$font-size-root:              1.5rem;
 //$font-size-base:              1.25rem;
 
-$body-color-light:            rgba(#000, 80%);
-$body-color-dark:             rgba(#fff, 80%);
-
-$body-bg-light:               #f5f6f6;
-$body-bg-dark:                #272d32;
-
-$btn-bg-light:                darken($body-bg-light, 5%);
-$btn-bg-dark:                 darken($body-bg-dark, 5%);
-
-$color-primary:               #f73232;
-$color-link:                  #3a86ff;
-
-$avatar-size:                 10rem;
-
-$container-max-width:         45rem;
+$body-color-light: rgba(#000, 80%);
+$body-color-dark: rgba(#fff, 80%);
+$body-bg-light: #f5f6f6;
+$body-bg-dark: #272d32;
+$btn-bg-light: darken($body-bg-light, 5%);
+$btn-bg-dark: darken($body-bg-dark, 5%);
+$color-primary: #f73232;
+$color-link: #3a86ff;
+$avatar-size: 10rem;
+$container-max-width: 45rem;

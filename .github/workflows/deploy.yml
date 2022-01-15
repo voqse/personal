@@ -2,11 +2,10 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   Build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +18,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          source: "."
-          target: "node/personal"
+          source: '.'
+          target: 'node/personal'
           strip_components: 1
 
       - name: Executing remote ssh commands
