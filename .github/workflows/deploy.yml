@@ -33,5 +33,5 @@ jobs:
             cd node/personal
             npm ci
             npm run build
-            PM2_HOME=/home/voqse-node/pm2 pm2 delete index.js
-            PM2_HOME=/home/voqse-node/pm2 pm2 start index.js --name 'personal-website'
+            pm2 delete index.js
+            pm2 start index.js --name 'personal-website'
